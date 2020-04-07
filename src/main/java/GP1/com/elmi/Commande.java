@@ -2,62 +2,54 @@ package GP1.com.elmi;
 
 public class Commande {
 
-	private String num;
-	private String date;
-	ProdAliement PA;
-	ProdElectro PE;
-	Caisse c;
+    private String num;
+    private String date;
+    ProduitAlimentaire p1;
+    ProduitElectronique pEl;
+    Caisse caisse;
 
-	public Commande(ProdAliement Pa, ProdElectro Pe, Caisse c1, String n, String date) {
+    public Commande(ProduitAlimentaire pR, ProduitElectronique pE, Caisse caisse, String num, String date) {
 
-		this.date = date;
-		this.num = n;
+        this.date = date;
+        this.num = num;
 
-		this.PA = Pa;
+        this.p1 = pR;
 
-		this.PE = Pe;
+        this.pEl = pE;
 
-		this.c = c1;
-	}
+        this.caisse = caisse;
+    }
 
-	public void setDate(String date) {
-		this.date = date;
-	}
+    public void setDate(String date) {
+        this.date = date;
+    }
 
-	public String getDate() {
-		return date;
-	}
+    public String getDate() {
+        return date;
+    }
 
-	public String getNum() {
-		return num;
-	}
+    public String getNum() {
+        return num;
+    }
 
-	public void setNum(String num) {
-		this.num = num;
-	}
+    public void setNum(String num) {
+        this.num = num;
+    }
 
-	public ProdAliement getPA() {
-		return PA;
-	}
+    public ProduitAlimentaire getP1() {
+        return p1;
+    }
 
-	public void setPA(ProdAliement pA) {
-		PA = pA;
-	}
+    public void setP1(ProduitAlimentaire p1) {
+        this.p1 = p1;
+    }
 
-	public ProdElectro getPE() {
-		return PE;
-	}
+    public ProduitElectronique getpEl() {
+        return pEl;
+    }
 
-	public void setPE(ProdElectro pE) {
-		PE = pE;
-	}
-
-	public Caisse getC() {
-		return c;
-	}
-
-	public void setC(Caisse c) {
-		this.c = c;
-	}
+    public void setpEl(ProduitElectronique pEl) {
+        this.pEl = pEl;
+    }
 
 }

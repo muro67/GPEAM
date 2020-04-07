@@ -1,35 +1,33 @@
 package GP1.com.elmi;
 
 public class Caisse {
-	
-	private int PrixA;
 
-	private int PrixE;
+	private int prixA;
 
+	private int prixE;
+
+	public Caisse(int a, int b) {
+
+		this.prixA = a;
+
+		this.prixE = b;
+
+	}
 
 	public int getPrixA() {
-		return PrixA;
+		return prixA;
 	}
 
 	public void setPrixA(int prixA) {
-		PrixA = prixA;
+		this.prixA = prixA;
 	}
 
 	public int getPrixE() {
-		return PrixE;
+		return prixE;
 	}
 
 	public void setPrixE(int prixE) {
-		PrixE = prixE;
-	}
-
-	
-	public Caisse(int a, int b) {
-
-		this.PrixA = a;
-
-		this.PrixE = b;
-
+		this.prixE = prixE;
 	}
 
 }
