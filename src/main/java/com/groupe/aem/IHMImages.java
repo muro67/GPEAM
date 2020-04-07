@@ -1,4 +1,4 @@
-package GP1.com.elmi;
+package com.groupe.aem;
 
 import java.awt.Color;
 import java.awt.Dimension;

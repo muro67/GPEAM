@@ -1,4 +1,4 @@
-package GP1.com.elmi;
+package com.groupe.aem;
 
 public class Client {
     public String nom, sexe, adresse;
