@@ -1,4 +1,4 @@
-package test.com.aem;
+package com.groupe.aem;
 
 /*import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
