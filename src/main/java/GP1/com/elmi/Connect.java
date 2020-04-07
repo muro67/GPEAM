@@ -6,12 +6,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
  
-public class CATE extends JFrame implements ActionListener{
- JButton SUBMIT;
+public class Connect extends JFrame implements ActionListener{
+ JButton Connect;
  JPanel panel;
  JLabel label1,label2;
  final JTextField  text1,text2;
-  CATE()
+ 
+  Connect()
   {
   label1 = new JLabel();
   label1.setText("Username:");
@@ -21,16 +22,16 @@ public class CATE extends JFrame implements ActionListener{
   label2.setText("Password:");
   text2 = new JPasswordField(15);
  
-  SUBMIT=new JButton("SUBMIT");
+  Connect=new JButton("Connect");
   
   panel=new JPanel(new GridLayout(3,1));
   panel.add(label1);
   panel.add(text1);
   panel.add(label2);
   panel.add(text2);
-  panel.add(SUBMIT);
+  panel.add(Connect);
   add(panel,BorderLayout.CENTER);
-  SUBMIT.addActionListener(this);
+  Connect.addActionListener(this);
   setTitle("LOGIN FORM");
   }
  public void actionPerformed(ActionEvent ae)

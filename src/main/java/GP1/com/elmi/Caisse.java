@@ -1,6 +1,11 @@
 package GP1.com.elmi;
 
 public class Caisse {
+	
+	private int PrixA;
+
+	private int PrixE;
+
 
 	public int getPrixA() {
 		return PrixA;
@@ -18,10 +23,7 @@ public class Caisse {
 		PrixE = prixE;
 	}
 
-	private int PrixA;
-
-	private int PrixE;
-
+	
 	public Caisse(int a, int b) {
 
 		this.PrixA = a;

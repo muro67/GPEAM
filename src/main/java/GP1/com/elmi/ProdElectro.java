@@ -1,6 +1,5 @@
 package GP1.com.elmi;
 
-
 public class ProdElectro {
 
 	public String code, A, B, C, D, E, energ;

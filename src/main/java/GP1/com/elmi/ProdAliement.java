@@ -1,7 +1,5 @@
 package GP1.com.elmi;
 
-
-
 public class ProdAliement {
 
 	private int Datedefabrication;
