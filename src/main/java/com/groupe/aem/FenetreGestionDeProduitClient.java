@@ -20,9 +20,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 public class FenetreGestionDeProduitClient {
-    static final String SQL_URL = "jdbc:mysql://nas.loehr.fr:3307/notrenouveaudonne?autoReconnect=true&useSSL=false";
+    static final String SQL_URL = "";
     static final String SQL_LOGIN = "root";
-    static final String SQL_PASSWORD = "fe*µµµ4z89dez453fds*ù$ù$fd:!,v;,xc:jnkq}}sd&é@@=àçàçA";
+    static final String SQL_PASSWORD = "";
 
     Connection cn = null;
     Statement st = null;
