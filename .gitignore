@@ -1,6 +1,11 @@
+#Java
 /target/
+
+#IntelliJ
 /.idea/
-/GP1elmi.iml
-/.classpath
+/*.iml
+
+#Eclipse
+/.settings/
 /.project
-/.settings
+/.classpath
