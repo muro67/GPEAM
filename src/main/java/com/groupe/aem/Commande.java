@@ -1,55 +1,60 @@
 package com.groupe.aem;
 
+import java.time.LocalDate;
+
 public class Commande {
 
-    private String num;
-    private String date;
-    ProduitAlimentaire p1;
-    ProduitElectronique pEl;
     Caisse caisse;
+    private String code;
+    private LocalDate date;
+    ProduitAlimentaire produitAlimentaire;
+    ProduitElectronique produitElectronique;
 
-    public Commande(ProduitAlimentaire pR, ProduitElectronique pE, Caisse caisse, String num, String date) {
-
-        this.date = date;
-        this.num = num;
-
-        this.p1 = pR;
-
-        this.pEl = pE;
-
+    public Commande(ProduitAlimentaire produitAlimentaire, ProduitElectronique produitElectronique, Caisse caisse, String code, LocalDate date) {
         this.caisse = caisse;
+
+        this.date = date;
+        this.code = code;
+
+        this.produitAlimentaire = produitAlimentaire;
+        this.produitElectronique = produitElectronique;
     }
 
-    public void setDate(String date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
-    public String getDate() {
+    public void setDate(int annee, int mois, int jourDuMois) {
+        this.date = LocalDate.of(annee, mois, jourDuMois);
+    }
+
+    public LocalDate getDate() {
         return date;
     }
 
-    public String getNum() {
-        return num;
+
+    public String getCode() {
+        return code;
     }
 
-    public void setNum(String num) {
-        this.num = num;
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
-    public ProduitAlimentaire getP1() {
-        return p1;
+    public ProduitAlimentaire getProduitAlimentaire() {
+        return produitAlimentaire;
     }
 
-    public void setP1(ProduitAlimentaire p1) {
-        this.p1 = p1;
+    public void setProduitAlimentaire(ProduitAlimentaire produitAlimentaire) {
+        this.produitAlimentaire = produitAlimentaire;
     }
 
-    public ProduitElectronique getpEl() {
-        return pEl;
+    public ProduitElectronique getProduitElectronique() {
+        return produitElectronique;
     }
 
-    public void setpEl(ProduitElectronique pEl) {
-        this.pEl = pEl;
+    public void setProduitElectronique(ProduitElectronique produitElectronique) {
+        this.produitElectronique = produitElectronique;
     }
-
 }
