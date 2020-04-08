@@ -26,17 +26,21 @@ public class ProduitElectronique {
         this.libelle = libelle;
     }
 
-    public Energetique getType() {
+    public void setCodeEnergetique(String codeEnergetique) {
+        this.codeEnergetique = codeEnergetique;
+    }
 
-        if (codeEnergetique == "A") {
-            return Energetique.Economique;
-        } else if (codeEnergetique == "B") {
-            return Energetique.Economique;
-        } else if (codeEnergetique == "C") {
-            return Energetique.Modere;
-        } else if (codeEnergetique == "D") {
-            return Energetique.Energivore;
-        } else
-            return Energetique.Abuse;
+    public TypeEnergetique getType() {
+        switch (codeEnergetique) {
+            case "A":
+            case "B":
+                return TypeEnergetique.Economique;
+            case "C":
+                return TypeEnergetique.Modere;
+            case "D":
+                return TypeEnergetique.Energivore;
+            default:
+                return TypeEnergetique.Abuse;
+        }
     }
 }
