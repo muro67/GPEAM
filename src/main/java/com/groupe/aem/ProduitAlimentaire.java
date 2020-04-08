@@ -1,31 +1,50 @@
 package com.groupe.aem;
 
+import java.time.DateTimeException;
+import java.time.LocalDate;
+
 public class ProduitAlimentaire {
 
-    private int dateDeFabrication;
-    private int dateLimite;
-    public String libelle;
+    private LocalDate dateDeFabrication;
+    private LocalDate dateLimiteDeConsommation;
+    private String libelle;
+    final static public String MESSAGE_ERREUR_DATE = "La Date Limite de CONSOMMATION ne peut pas être avant la Date de FABRICATION";
 
-    public ProduitAlimentaire(int dateDeFabrication, int dateLimite, String libelle) {
+
+    public ProduitAlimentaire(LocalDate dateDeFabrication, LocalDate dateLimiteDeConsommation, String libelle) {
         this.dateDeFabrication = dateDeFabrication;
-        this.dateLimite = dateLimite;
+        this.setDateLimiteDeConsommation(dateLimiteDeConsommation);
         this.libelle = libelle;
     }
 
-    public int getDateDeFabrication() {
+    public LocalDate getDateDeFabrication() {
         return dateDeFabrication;
     }
 
-    public void setDateDeFabrication(int dateDeFabrication) {
+    public void setDateDeFabrication(LocalDate dateDeFabrication) {
+        if( this.getDateLimiteDeConsommation().isBefore(dateDeFabrication)) {
+            throw new DateTimeException(MESSAGE_ERREUR_DATE);
+        }
         this.dateDeFabrication = dateDeFabrication;
     }
 
-    public int getDateLimite() {
-        return dateLimite;
+    public void setDateDeFabrication(int annee, int mois, int jourDuMois) {
+        this.setDateDeFabrication(LocalDate.of(annee, mois, jourDuMois));
     }
 
-    public void setDateLimite(int dateLimite) {
-        this.dateLimite = dateLimite;
+    public LocalDate getDateLimiteDeConsommation() {
+        return dateLimiteDeConsommation;
+    }
+
+    public void setDateLimiteDeConsommation(LocalDate dateLimiteDeConsommation) {
+        if( dateLimiteDeConsommation.isBefore(this.getDateDeFabrication())) {
+            throw new DateTimeException(MESSAGE_ERREUR_DATE);
+        }
+        this.dateLimiteDeConsommation = dateLimiteDeConsommation;
+    }
+
+    public void setDateLimiteDeConsommation(int annee, int mois, int jourDuMois) {
+        this.setDateLimiteDeConsommation(LocalDate.of(annee, mois, jourDuMois));
     }
 
     public String getLibelle() {
@@ -35,5 +54,4 @@ public class ProduitAlimentaire {
     public void setLibelle(String libelle) {
         this.libelle = libelle;
     }
-
 }
