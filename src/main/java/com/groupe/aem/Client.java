@@ -6,7 +6,6 @@ public class Client {
     public int age;
 
     public Client(String nom, String sexe, String adresse, int age) {
-
         this.adresse = adresse;
         this.age = age;
         this.nom = nom;
