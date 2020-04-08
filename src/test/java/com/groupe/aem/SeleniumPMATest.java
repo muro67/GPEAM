@@ -10,9 +10,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import static org.junit.Assert.assertTrue;
 
 public class SeleniumPMATest {
-    private final String URL_PHPMYADMIN = "http://nas.loehr.fr/phpMyAdmin/";
+    private final String URL_PHPMYADMIN = "http://localhost/phpMyAdmin/";
     private final String LOGIN_USERNAME = "root";
-    private final String LOGIN_PASSWORD = "fe*µµµ4z89dez453fds*ù$ù$fd:!,v;,xc:jnkq}}sd&é@@=àçàçA";
+    private final String LOGIN_PASSWORD = "";
 
     @BeforeClass
     public static void init() {
